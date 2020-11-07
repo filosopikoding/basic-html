@@ -13,4 +13,3 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 const database = firebase.database()
 const kelasRef = database.ref('kelas')
-const auth = firebase.auth()
