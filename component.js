@@ -10,41 +10,6 @@ const NotFound = {
 	template: '<div>Halaman Tidak Ditemukan..</div>'
 }
 
-const Register = {
-	template: `<div>
-		<h3>Register Firebase</h3>
-		<form @submit.prevent="handlesubmit">
-			<div>
-				<label for="">Email</label>
-				<input type="text" placeholder="Email" v-model="user.email">
-			</div>
-			<div>
-				<label for="">Password</label>
-				<input type="text" placeholder="Password" v-model="user.password">
-			</div>
-			<button type="submit">Register</button>
-		</form>
-	</div>`,
-	data() {
-		return {
-			user: {
-				email: '',
-				password: ''
-			}
-		}
-	},
-	methods: {
-		handlesubmit() {
-			auth.createUserWithEmailAndPassword(this.user.email, this.user.password)
-			.then(function(data) {
-				console.log(data)
-			}).catch(function(error){
-				console.log(error)
-			})
-		}
-	}
-}
-
 const detailKelas = {
 	template : `<div>
 				<template v-if="detailkelas">
