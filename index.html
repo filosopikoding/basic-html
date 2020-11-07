@@ -9,7 +9,24 @@
 <body>
 
 <div id="app">
-	
+	<header-component nama="Vuejs"></header-component>
+
+	<nav>
+		<router-link to="/">Home</router-link>
+		<router-link to="/about">About</router-link>
+		<router-link to="/kelas">Kelas</router-link>
+		<router-link to="/register">Register</router-link>
+	</nav>
+
+	<main>
+		<router-view v-bind:items="kelas" 
+		v-on:submitkelas="submitkelas" 
+		v-on:hapuskelas="hapuskelas"></router-view>
+	</main>
+
+	<footer-component>
+		<p>copyright 2020 - kelas.baledemy</p>	
+	</footer-component>	
 </div>
 
 </body>
